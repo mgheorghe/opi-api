@@ -62,11 +62,9 @@ type IkePeerServiceClient interface {
 	GetIkePeer(ctx context.Context, in *GetIkePeerRequest, opts ...grpc.CallOption) (*IkePeer, error)
 	// List existing IKE peers.
 	ListIkePeers(ctx context.Context, in *ListIkePeersRequest, opts ...grpc.CallOption) (*ListIkePeersResponse, error)
-	// Create a batch of IKE peers in a single request. The operation is atomic:
-	// either all the IKE peers are created or none are.
+	// Create a batch of IKE peers atomically.
 	BatchCreateIkePeers(ctx context.Context, in *BatchCreateIkePeersRequest, opts ...grpc.CallOption) (*BatchCreateIkePeersResponse, error)
-	// Delete a batch of IKE peers in a single request. The operation is atomic:
-	// either all the IKE peers are deleted or none are.
+	// Delete a batch of IKE peers atomically.
 	BatchDeleteIkePeers(ctx context.Context, in *BatchDeleteIkePeersRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
@@ -166,11 +164,9 @@ type IkePeerServiceServer interface {
 	GetIkePeer(context.Context, *GetIkePeerRequest) (*IkePeer, error)
 	// List existing IKE peers.
 	ListIkePeers(context.Context, *ListIkePeersRequest) (*ListIkePeersResponse, error)
-	// Create a batch of IKE peers in a single request. The operation is atomic:
-	// either all the IKE peers are created or none are.
+	// Create a batch of IKE peers atomically.
 	BatchCreateIkePeers(context.Context, *BatchCreateIkePeersRequest) (*BatchCreateIkePeersResponse, error)
-	// Delete a batch of IKE peers in a single request. The operation is atomic:
-	// either all the IKE peers are deleted or none are.
+	// Delete a batch of IKE peers atomically.
 	BatchDeleteIkePeers(context.Context, *BatchDeleteIkePeersRequest) (*emptypb.Empty, error)
 	mustEmbedUnimplementedIkePeerServiceServer()
 }
@@ -425,11 +421,9 @@ type IkeConnectionServiceClient interface {
 	ListIkeConnections(ctx context.Context, in *ListIkeConnectionsRequest, opts ...grpc.CallOption) (*ListIkeConnectionsResponse, error)
 	// Get IKE connection statistics.
 	StatsIkeConnections(ctx context.Context, in *StatsIkeConnectionsRequest, opts ...grpc.CallOption) (*StatsIkeConnectionsResponse, error)
-	// Create a batch of IKE connections in a single request. The operation is
-	// atomic: either all the IKE connections are created or none are.
+	// Create a batch of IKE connections atomically.
 	BatchCreateIkeConnections(ctx context.Context, in *BatchCreateIkeConnectionsRequest, opts ...grpc.CallOption) (*BatchCreateIkeConnectionsResponse, error)
-	// Delete a batch of IKE connections in a single request. The operation is
-	// atomic: either all the IKE connections are deleted or none are.
+	// Delete a batch of IKE connections atomically.
 	BatchDeleteIkeConnections(ctx context.Context, in *BatchDeleteIkeConnectionsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
@@ -545,11 +539,9 @@ type IkeConnectionServiceServer interface {
 	ListIkeConnections(context.Context, *ListIkeConnectionsRequest) (*ListIkeConnectionsResponse, error)
 	// Get IKE connection statistics.
 	StatsIkeConnections(context.Context, *StatsIkeConnectionsRequest) (*StatsIkeConnectionsResponse, error)
-	// Create a batch of IKE connections in a single request. The operation is
-	// atomic: either all the IKE connections are created or none are.
+	// Create a batch of IKE connections atomically.
 	BatchCreateIkeConnections(context.Context, *BatchCreateIkeConnectionsRequest) (*BatchCreateIkeConnectionsResponse, error)
-	// Delete a batch of IKE connections in a single request. The operation is
-	// atomic: either all the IKE connections are deleted or none are.
+	// Delete a batch of IKE connections atomically.
 	BatchDeleteIkeConnections(context.Context, *BatchDeleteIkeConnectionsRequest) (*emptypb.Empty, error)
 	mustEmbedUnimplementedIkeConnectionServiceServer()
 }
@@ -822,11 +814,9 @@ type IpsecSaServiceClient interface {
 	GetIpsecSa(ctx context.Context, in *GetIpsecSaRequest, opts ...grpc.CallOption) (*IpsecSa, error)
 	// List existing IPsec Security Associations
 	ListIpsecSas(ctx context.Context, in *ListIpsecSasRequest, opts ...grpc.CallOption) (*ListIpsecSasResponse, error)
-	// Create a batch of IPsec Security Associations in a single request. The
-	// operation is atomic: either all the IPsec SAs are created or none are.
+	// Create a batch of IPsec SAs atomically.
 	BatchCreateIpsecSas(ctx context.Context, in *BatchCreateIpsecSasRequest, opts ...grpc.CallOption) (*BatchCreateIpsecSasResponse, error)
-	// Delete a batch of IPsec Security Associations in a single request. The
-	// operation is atomic: either all the IPsec SAs are deleted or none are.
+	// Delete a batch of IPsec SAs atomically.
 	BatchDeleteIpsecSas(ctx context.Context, in *BatchDeleteIpsecSasRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
@@ -926,11 +916,9 @@ type IpsecSaServiceServer interface {
 	GetIpsecSa(context.Context, *GetIpsecSaRequest) (*IpsecSa, error)
 	// List existing IPsec Security Associations
 	ListIpsecSas(context.Context, *ListIpsecSasRequest) (*ListIpsecSasResponse, error)
-	// Create a batch of IPsec Security Associations in a single request. The
-	// operation is atomic: either all the IPsec SAs are created or none are.
+	// Create a batch of IPsec SAs atomically.
 	BatchCreateIpsecSas(context.Context, *BatchCreateIpsecSasRequest) (*BatchCreateIpsecSasResponse, error)
-	// Delete a batch of IPsec Security Associations in a single request. The
-	// operation is atomic: either all the IPsec SAs are deleted or none are.
+	// Delete a batch of IPsec SAs atomically.
 	BatchDeleteIpsecSas(context.Context, *BatchDeleteIpsecSasRequest) (*emptypb.Empty, error)
 	mustEmbedUnimplementedIpsecSaServiceServer()
 }
@@ -1178,11 +1166,9 @@ type IpsecPolicyServiceClient interface {
 	GetIpsecPolicy(ctx context.Context, in *GetIpsecPolicyRequest, opts ...grpc.CallOption) (*IpsecPolicy, error)
 	// List existing IPsec Policies
 	ListIpsecPolicies(ctx context.Context, in *ListIpsecPoliciesRequest, opts ...grpc.CallOption) (*ListIpsecPoliciesResponse, error)
-	// Create a batch of IPsec Policies in a single request. The operation is
-	// atomic: either all the IPsec policies are created or none are.
+	// Create a batch of IPsec policies atomically.
 	BatchCreateIpsecPolicies(ctx context.Context, in *BatchCreateIpsecPoliciesRequest, opts ...grpc.CallOption) (*BatchCreateIpsecPoliciesResponse, error)
-	// Delete a batch of IPsec Policies in a single request. The operation is
-	// atomic: either all the IPsec policies are deleted or none are.
+	// Delete a batch of IPsec policies atomically.
 	BatchDeleteIpsecPolicies(ctx context.Context, in *BatchDeleteIpsecPoliciesRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
@@ -1282,11 +1268,9 @@ type IpsecPolicyServiceServer interface {
 	GetIpsecPolicy(context.Context, *GetIpsecPolicyRequest) (*IpsecPolicy, error)
 	// List existing IPsec Policies
 	ListIpsecPolicies(context.Context, *ListIpsecPoliciesRequest) (*ListIpsecPoliciesResponse, error)
-	// Create a batch of IPsec Policies in a single request. The operation is
-	// atomic: either all the IPsec policies are created or none are.
+	// Create a batch of IPsec policies atomically.
 	BatchCreateIpsecPolicies(context.Context, *BatchCreateIpsecPoliciesRequest) (*BatchCreateIpsecPoliciesResponse, error)
-	// Delete a batch of IPsec Policies in a single request. The operation is
-	// atomic: either all the IPsec policies are deleted or none are.
+	// Delete a batch of IPsec policies atomically.
 	BatchDeleteIpsecPolicies(context.Context, *BatchDeleteIpsecPoliciesRequest) (*emptypb.Empty, error)
 	mustEmbedUnimplementedIpsecPolicyServiceServer()
 }

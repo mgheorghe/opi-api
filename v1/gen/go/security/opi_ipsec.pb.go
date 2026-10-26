@@ -3421,9 +3421,7 @@ func (x *ListIkePeersResponse) GetNextPageToken() string {
 // Create a batch of IKE Peers
 type BatchCreateIkePeersRequest struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
-	// The individual IKE peer create requests. The service may limit the
-	// number of requests in a single batch; clients loading a large
-	// configuration should split it into several batches.
+	// The create requests; split large configurations into several batches.
 	Requests      []*CreateIkePeerRequest `protobuf:"bytes,1,rep,name=requests,proto3" json:"requests,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -3875,9 +3873,7 @@ func (x *ListIkeConnectionsResponse) GetNextPageToken() string {
 // Create a batch of IKE Connections
 type BatchCreateIkeConnectionsRequest struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
-	// The individual IKE connection create requests. The service may limit the
-	// number of requests in a single batch; clients loading a large
-	// configuration should split it into several batches.
+	// The create requests; split large configurations into several batches.
 	Requests      []*CreateIkeConnectionRequest `protobuf:"bytes,1,rep,name=requests,proto3" json:"requests,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -4210,9 +4206,7 @@ func (x *ListIpsecSasResponse) GetNextPageToken() string {
 // Create a batch of IPsec SAs
 type BatchCreateIpsecSasRequest struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
-	// The individual IPsec SA create requests. The service may limit the
-	// number of requests in a single batch; clients loading a large
-	// configuration should split it into several batches.
+	// The create requests; split large configurations into several batches.
 	Requests      []*CreateIpsecSaRequest `protobuf:"bytes,1,rep,name=requests,proto3" json:"requests,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -4866,9 +4860,7 @@ func (x *ListIpsecPoliciesResponse) GetNextPageToken() string {
 // Create a batch of IPsec Policies
 type BatchCreateIpsecPoliciesRequest struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
-	// The individual IPsec policy create requests. The service may limit the
-	// number of requests in a single batch; clients loading a large
-	// configuration should split it into several batches.
+	// The create requests; split large configurations into several batches.
 	Requests      []*CreateIpsecPolicyRequest `protobuf:"bytes,1,rep,name=requests,proto3" json:"requests,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache

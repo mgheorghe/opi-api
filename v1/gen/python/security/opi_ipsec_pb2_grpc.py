@@ -96,16 +96,14 @@ class IkePeerServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def BatchCreateIkePeers(self, request, context):
-        """Create a batch of IKE peers in a single request. The operation is atomic:
-        either all the IKE peers are created or none are.
+        """Create a batch of IKE peers atomically.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def BatchDeleteIkePeers(self, request, context):
-        """Delete a batch of IKE peers in a single request. The operation is atomic:
-        either all the IKE peers are deleted or none are.
+        """Delete a batch of IKE peers atomically.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -461,16 +459,14 @@ class IkeConnectionServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def BatchCreateIkeConnections(self, request, context):
-        """Create a batch of IKE connections in a single request. The operation is
-        atomic: either all the IKE connections are created or none are.
+        """Create a batch of IKE connections atomically.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def BatchDeleteIkeConnections(self, request, context):
-        """Delete a batch of IKE connections in a single request. The operation is
-        atomic: either all the IKE connections are deleted or none are.
+        """Delete a batch of IKE connections atomically.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -843,16 +839,14 @@ class IpsecSaServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def BatchCreateIpsecSas(self, request, context):
-        """Create a batch of IPsec Security Associations in a single request. The
-        operation is atomic: either all the IPsec SAs are created or none are.
+        """Create a batch of IPsec SAs atomically.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def BatchDeleteIpsecSas(self, request, context):
-        """Delete a batch of IPsec Security Associations in a single request. The
-        operation is atomic: either all the IPsec SAs are deleted or none are.
+        """Delete a batch of IPsec SAs atomically.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -1191,16 +1185,14 @@ class IpsecPolicyServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def BatchCreateIpsecPolicies(self, request, context):
-        """Create a batch of IPsec Policies in a single request. The operation is
-        atomic: either all the IPsec policies are created or none are.
+        """Create a batch of IPsec policies atomically.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def BatchDeleteIpsecPolicies(self, request, context):
-        """Delete a batch of IPsec Policies in a single request. The operation is
-        atomic: either all the IPsec policies are deleted or none are.
+        """Delete a batch of IPsec policies atomically.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
